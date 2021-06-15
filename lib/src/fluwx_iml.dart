@@ -22,10 +22,10 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:fluwx_no_pay/src/wechat_enums.dart';
 
 import 'response/wechat_response.dart';
 import 'share/share_models.dart';
+import 'wechat_enums.dart';
 
 const Map<Type, String> _shareModelMethodMapper = {
   WeChatShareTextModel: "shareText",
@@ -129,41 +129,6 @@ Future<bool> launchWeChatMiniProgram(
     "userName": username,
     "path": path,
     "miniProgramType": miniProgramType.toNativeInt()
-  });
-}
-
-/// request payment with WeChat.
-/// Read the official document for more detail.
-/// [timeStamp] is int because [timeStamp] will be mapped to Unit32.
-/// only works with android
-Future<bool> payWithWeChat(
-    {required String appId,
-    required String partnerId,
-    required String prepayId,
-    required String packageValue,
-    required String nonceStr,
-    required int timeStamp,
-    required String sign,
-    String? signType,
-    String? extData}) async {
-  return await _channel.invokeMethod("payWithFluwx", {
-    "appId": appId,
-    "partnerId": partnerId,
-    "prepayId": prepayId,
-    "packageValue": packageValue,
-    "nonceStr": nonceStr,
-    "timeStamp": timeStamp,
-    "sign": sign,
-    "signType": signType,
-    "extData": extData,
-  });
-}
-
-/// request Hong Kong Wallet payment with WeChat.
-/// Read the official document for more detail.
-Future<bool> payWithWeChatHongKongWallet({required String prepayId}) async {
-  return await _channel.invokeMethod("payWithHongKongWallet", {
-    "prepayId": prepayId,
   });
 }
 

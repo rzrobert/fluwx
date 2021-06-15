@@ -1,7 +1,7 @@
-name: fluwx_no_pay
-description: The capability of implementing WeChat SDKs in Flutter. With Fluwx, developers can use WeChatSDK easily, such as sharing, payment, lanuch mini program and etc.
-version: 3.4.3
-homepage: https://github.com/JarvanMo/fluwx
+name: fluwx_no_pay_rz
+description: The capability of implementing WeChat SDKs in Flutter. With Fluwx, developers can use WeChatSDK easily, such as sharing, lanuch mini program and etc.
+version: 3.4.4
+homepage: https://github.com/rzrobert/fluwx/tree/no_pay_nullsafety
 
 environment:
   sdk: ">=2.12.0 <3.0.0"

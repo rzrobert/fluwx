@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluwx_no_pay/fluwx_no_pay.dart' as fluwx;
+import 'package:fluwx_no_pay_rz/fluwx_no_pay_rz.dart' as fluwx;
 
 class SendAuthPage extends StatefulWidget {
   @override

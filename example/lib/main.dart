@@ -1,11 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:fluwx_no_pay/fluwx_no_pay.dart';
+import 'package:fluwx_no_pay_rz/fluwx_no_pay_rz.dart';
 
 import 'auth_by_qr_code_page.dart';
 import 'launch_mini_program_page.dart';
-import 'pay_page.dart';
 import 'send_auth.dart';
 import 'share_image_page.dart';
 import 'share_mini_program.dart';

@@ -2,12 +2,12 @@
 
 ### 微信回调
 
-实际上，像`shareToWeChat` or `payWithWeChat`这种的函数，底层上是调用了原生SDK的`sendRequest`方法，所以他们的返回结果意义不大，他们的返回结果仅仅是`sendRequest`的返回值。
+实际上，像`shareToWeChat`这种的函数，底层上是调用了原生SDK的`sendRequest`方法，所以他们的返回结果意义不大，他们的返回结果仅仅是`sendRequest`的返回值。
 为了获取真实的回调，你应该这样做：
 
 ```dart
   fluwx.weChatResponseEventHandler.listen((res) {
-    if (res is fluwx.WeChatPaymentResponse) {
+    if (res is fluwx.shareToWeChat) {
       // do something here
     }
   });

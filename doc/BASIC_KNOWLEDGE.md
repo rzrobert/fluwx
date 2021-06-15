@@ -1,12 +1,12 @@
 ## Basic knowledge
 
 ### Response from WeChat
-Actually, almost every result from functions like `shareToWeChat` or `payWithWeChat` which call `sendRequest` in native doesn't makes sense. The `bool` value is the result of `sendRequest`.
+Actually, almost every result from functions like `shareToWeChat` which call `sendRequest` in native doesn't makes sense. The `bool` value is the result of `sendRequest`.
 So if you want get the real result you shall do like this:
 
 ```dart
   fluwx.weChatResponseEventHandler.listen((res) {
-    if (res is fluwx.WeChatPaymentResponse) {
+    if (res is fluwx.shareToWeChat) {
       // do something here
     }
   });

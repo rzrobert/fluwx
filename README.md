@@ -46,10 +46,10 @@ dependencies:
 
 ```yaml
 dependencies:
-  fluwx_no_pay: ^${latestVersion}
+  fluwx_no_pay_rz: ^${latestVersion}
 ```
 
-![pub package](https://img.shields.io/pub/v/fluwx_no_pay.svg)
+![pub package](https://img.shields.io/pub/v/fluwx_no_pay_rz.svg)
 
 > NOTE: Never forget to replace ^${latestVersion} with actual version.
 
